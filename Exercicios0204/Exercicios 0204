@@ -1,0 +1,29 @@
+I) 1) a) Ele não permite o acesso de altura e largura da classe TwoDShape pela classe Triangulo no
+metodo area(), para corrigir isso é apenas necessário mudar o código na subclasse Triangulo para usar os
+metodos acessadores getAltura() e getLargura(). Ele também não possui o método setEstilo() na subClasse
+Triangulo, sendo necessário criar o método setEstilo(String estilo) na subclasse Triangulo, que permita
+fazer a alteração do estilo do objeto da classe Triangulo.
+
+2) a) O resultado impresso será:
+
+Computador()
+Notebook()
+Código: 12345
+
+Isso se dá pelo fato de que ao chamar o construtor da subclasse Notebook, antes é chamado o construtor da
+superclasse Computador, que vai imprimir Computador(), após isso ele vai chamar o construtor da classe
+Notebook, que vai imprimir Notebook() e o código vinculado ao objeto.
+
+3) O resultado impresso foi:
+
+x: 8
+x: 12
+
+Isso se dá pelo fato de que tanto objetos da super classe Protegido quanto os da subclasse ProtegidoSub
+utilizam o construtor public Protegido(int i) como base para a criação do objeto, assim como os métodos da
+super classe com o modificador de acesso protected, que garante o acesso aos métodos da super classe aos
+objetos do tipo da super classe e pelos objetos do tipo da subclasse. O modificador de acesso protected
+auxilia na herança das subclasses, garantindo que os métodos e atributos com esse modificador de acesso
+serão acessíveis pelas subclasses dessa superclasse, assim como o método ajustar() é acessível pela
+subclasse ProtegidoSub. Já o modificador de acesso private do atributo i, garante que ele só é acessável
+diretamente pela classe a qual aquele atributo pertence, o que garante maior modularização do código.
